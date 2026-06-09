@@ -7,6 +7,7 @@ import '../features/home/presentation/home_screen.dart';
 import '../features/orders/presentation/order_tracking_screen.dart';
 import '../features/orders/presentation/orders_screen.dart';
 import '../features/profile/presentation/profile_screen.dart';
+import '../features/request_service/presentation/request_service_screen.dart';
 
 abstract final class AppRouter {
   static final GoRouter router = GoRouter(
@@ -22,6 +23,10 @@ abstract final class AppRouter {
         builder: (context, state) => const ForgotPasswordScreen(),
       ),
       GoRoute(path: '/home', builder: (context, state) => const HomeScreen()),
+      GoRoute(
+        path: '/request-service',
+        builder: (context, state) => const RequestServiceScreen(),
+      ),
       GoRoute(
         path: '/orders',
         builder: (context, state) => const OrdersScreen(),

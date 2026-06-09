@@ -8,6 +8,9 @@ abstract final class AppColors {
   static const Color secondary = Color(0xFF735C00);
   static const Color tertiaryFixed = Color(0xFFD8E3FB);
   static const Color onTertiaryFixed = Color(0xFF111C2D);
+  static const Color error = Color(0xFFBA1A1A);
+  static const Color errorContainer = Color(0xFFFFDAD6);
+  static const Color onErrorContainer = Color(0xFF93000A);
   static const Color onSurface = Color(0xFF191C1E);
   static const Color onSurfaceVariant = Color(0xFF3D4A3D);
   static const Color outlineVariant = Color(0xFFBCCBB9);

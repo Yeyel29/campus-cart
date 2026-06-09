@@ -154,8 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           iconBackground: const Color(0xFFE5F3EB),
                           title: 'Delivery',
                           subtitle: 'Food & Parcels',
-                          onTap: () =>
-                              _showMessage('Delivery service selected'),
+                          onTap: () => context.push('/request-service'),
                         ),
                       ),
                       const SizedBox(width: AppSpacing.md),
@@ -167,8 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           iconBackground: const Color(0xFFFFF1B5),
                           title: 'Transport',
                           subtitle: 'Rides on Campus',
-                          onTap: () =>
-                              _showMessage('Transport service selected'),
+                          onTap: () => context.push('/request-service'),
                         ),
                       ),
                     ],
@@ -176,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(height: AppSpacing.md),
                   _WideServiceCard(
                     key: const Key('errandService'),
-                    onTap: () => _showMessage('Errand service selected'),
+                    onTap: () => context.push('/request-service'),
                   ),
                 ],
               ),
@@ -186,8 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         key: const Key('createRequestButton'),
-        onPressed: () =>
-            _showMessage('Create request is not available in prototype mode.'),
+        onPressed: () => context.push('/request-service'),
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
         shape: const CircleBorder(),
