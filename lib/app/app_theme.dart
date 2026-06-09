@@ -12,6 +12,7 @@ abstract final class AppTheme {
         ).copyWith(
           primary: AppColors.primary,
           primaryContainer: AppColors.primaryContainer,
+          onPrimaryContainer: AppColors.onPrimaryContainer,
           secondaryContainer: AppColors.secondaryContainer,
           surface: AppColors.surface,
           onSurface: AppColors.onSurface,
@@ -70,15 +71,24 @@ abstract final class AppTheme {
       scaffoldBackgroundColor: AppColors.background,
       textTheme: textTheme,
       inputDecorationTheme: const InputDecorationTheme(
-        filled: true,
-        fillColor: AppColors.surface,
-        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+        filled: false,
+        contentPadding: EdgeInsets.symmetric(horizontal: 22, vertical: 18),
         border: inputBorder,
         enabledBorder: inputBorder,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(16)),
           borderSide: BorderSide(color: AppColors.primary, width: 2),
         ),
+      ),
+      dividerTheme: const DividerThemeData(
+        color: AppColors.outlineVariant,
+        thickness: 1,
+        space: 1,
+      ),
+      snackBarTheme: SnackBarThemeData(
+        backgroundColor: AppColors.onSurface,
+        contentTextStyle: GoogleFonts.inter(color: Colors.white),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
